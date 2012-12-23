@@ -22,5 +22,5 @@ end
 
 gem 'jquery-rails'
 gem "nifty-generators", :group => :development
-
+gem 'devise'
 gem "mocha", :group => :test

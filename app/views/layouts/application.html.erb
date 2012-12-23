@@ -9,7 +9,6 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
   <body>
-
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -21,9 +20,9 @@
           <a class="brand" href="#">Team</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Hub", users_path  %></li>
+              <li><%= link_to "Home", homes_path  %></li>
+              <li><%= link_to "Teams", groups_path  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -32,12 +31,13 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span9">
+        <div class="span10 offset1">
           <%= yield %>
         </div>
       </div><!--/row-->
-    </div> <!-- /container -->
 
+
+    </div> <!-- /container -->
     <%= javascript_include_tag "application" %>
 
   </body>
