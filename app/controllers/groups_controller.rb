@@ -1,10 +1,12 @@
 class GroupsController < ApplicationController
+  before_filter :authenticate_user!,  :except => [:index,:show]
   def index
     @groups = Group.all
   end
 
   def show
     @group = Group.find(params[:id])
+    @name = @group.users
   end
 
   def new
@@ -12,7 +14,7 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(params[:group])
+    @group = current_user.groups.create(params[:group])
     if @group.save
       redirect_to @group, :notice => "Successfully created group."
     else

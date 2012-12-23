@@ -1,11 +1,12 @@
-
 <p>
   <strong>Name:</strong>
   <%= @group.name %>
 </p>
 <p>
   <strong>User:</strong>
-  <%= @group.user_id %>
+  <% @name.each do |name|%>
+     <%= name.name%>
+  <% end %>
 </p>
 <p>
   <strong>Description:</strong>

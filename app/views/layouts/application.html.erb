@@ -17,12 +17,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Team</a>
+          <a class="brand" href=<%= homes_path %>>Team</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "Hub", users_path  %></li>
               <li><%= link_to "Home", homes_path  %></li>
               <li><%= link_to "Teams", groups_path  %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to "Logout", destroy_user_session_path,:method => :delete  %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
