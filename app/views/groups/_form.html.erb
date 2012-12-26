@@ -1,15 +1,9 @@
-<%= form_for @group do |f| %>
+<%= simple_form_for @group ,:validate => true do |f| %>
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.input :name%>
   </p>
   <p>
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.input :description %>
   </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p><%= f.submit %></p>
+  <p><%= f.button :submit  %></p>
 <% end %>
