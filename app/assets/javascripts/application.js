@@ -15,4 +15,5 @@
 //= require twitter/bootstrap
 //= require rails.validations
 //= require rails.validations.simple_form
+//= require dataTables/jquery.dataTables
 //= require_tree .

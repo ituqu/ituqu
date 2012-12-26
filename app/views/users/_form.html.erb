@@ -1,7 +1,6 @@
-<%= form_for @user do |f| %>
+<%= simple_form_for @user do |f| %>
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.input :name %>
   </p>
-  <p><%= f.submit %></p>
+  <p><%= f.button  :submit %></p>
 <% end %>
