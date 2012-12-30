@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121223154523) do
+ActiveRecord::Schema.define(:version => 20121230143111) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(:version => 20121223154523) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "start"
+    t.string   "destination"
+    t.integer  "limitition"
+    t.datetime "when_to_go"
+    t.string   "link"
+    t.text     "remark"
   end
 
   create_table "groups_users", :force => true do |t|
