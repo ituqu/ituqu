@@ -1,20 +1,24 @@
 <p>
-  <strong>Name:</strong>
+  <strong>队伍名称：</strong>
   <%= @group.name %>
 </p>
 <p>
-  <strong>User:</strong>
-  <% @name.each do |name|%>
-     <%= name.name%>
-  <% end %>
-</p>
 <p>
-  <strong>Description:</strong>
+  <strong>队伍主页：</strong>
+  <%= @group.link || "暂时还没有主页" %>
+</p>
+  <strong>队伍主题：</strong>
   <%= @group.description %>
 </p>
-
+</p>
+  <strong>目的地：</strong>
+  <%= @group.destination %>
+</p>
+</p>
+  <strong>出发集结地：</strong>
+  <%= @group.start %>
+</p>
 <p>
   <%= link_to "Edit", edit_group_path(@group) %> |
   <%= link_to "Destroy", @group, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", groups_path %>
 </p>

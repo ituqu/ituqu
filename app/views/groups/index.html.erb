@@ -1,16 +1,18 @@
 <table id="groups">
   <thead>
   <tr>
-    <th>Name</th>
-    <th>User</th>
-    <th>Description</th>
+    <th>目的地</th>
+    <th>队伍名称</th>
+    <th>团队主页</th>
+    <th>队伍主题</th>
   </tr>
   <thead>
   <tbody>
   <% for group in @groups %>
     <tr>
+      <td><%= group.destination %></td>
       <td><%= group.name %></td>
-      <td><%= group.user_id %></td>
+      <td><%= link_to "团队主页",group_path(group) %></td>
       <td><%= group.description %></td>
     </tr>
   <% end %>

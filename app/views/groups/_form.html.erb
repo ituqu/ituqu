@@ -11,7 +11,16 @@
   <%= f.select :destination,Group.Pro_select.each{|key,value| [key,value]},{:include_blank => true},:label => "目的地"%>
   </p>
   <p>
+  <%= f.input :limitition ,:label => "人数上限"%>
+  </p>
+  <p>
   <%= f.input  :description ,:label => "旅行主题" %> 
+  </p>
+  <p>
+  <%= f.input  :remark ,:label => "备注" %> 
+  </p>
+  <p>
+  <%= f.input  :link ,:label => "活动主页" %> 
   </p>
   <p>
   <%= f.submit  %>
