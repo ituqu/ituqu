@@ -1,4 +1,5 @@
 class Group < ActiveRecord::Base
+  resourcify
   attr_accessible :name, :user_id, :description,:start,:destination,:limitition,:remark,:link
   has_and_belongs_to_many  :users
   validates :name,:description, :presence => true
