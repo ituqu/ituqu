@@ -12,11 +12,10 @@
     <tr>
       <td><%= group.destination %></td>
       <td><%= group.name %></td>
-      <td><%= link_to "团队主页",group_path(group) %></td>
+      <td><%= link_to "团队主页",group_path(group),:remote => true %></td>
       <td><%= group.description %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<p><%= link_to "New Group", new_group_path %></p>

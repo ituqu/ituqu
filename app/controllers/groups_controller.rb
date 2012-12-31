@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @name = @group.users
+    respond_with @group
   end
 
   def new
@@ -19,7 +20,8 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.create(params[:group])
     if @group.save
-      redirect_to @group, :notice => "Successfully created group."
+      #redirect_to @group, :notice => "Successfully created group."
+      respond_with @group
     else
       render :action => 'new'
     end
@@ -27,11 +29,13 @@ class GroupsController < ApplicationController
 
   def edit
     @group = Group.find(params[:id])
+    respond_with @group
   end
 
   def update
     @group = Group.find(params[:id])
     if @group.update_attributes(params[:group])
+      #respond_with @group
       redirect_to @group, :notice  => "Successfully updated group."
     else
       render :action => 'edit'

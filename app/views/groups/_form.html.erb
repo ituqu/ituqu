@@ -1,4 +1,4 @@
-<%= simple_form_for @group ,:validate => true do |f| %>
+<%= simple_form_for @group,:remote => true ,:validate => true do |f| %>
   <p>
   <%= f.input  :name , :label => "团队名称" %> 
   </p>
