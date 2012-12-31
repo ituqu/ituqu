@@ -31,3 +31,4 @@ gem 'client_side_validations-simple_form'
 gem 'apotomo'
 gem "ransack"
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails' 
+gem 'turbolinks'
