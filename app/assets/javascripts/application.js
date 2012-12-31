@@ -16,4 +16,5 @@
 //= require rails.validations
 //= require rails.validations.simple_form
 //= require dataTables/jquery.dataTables
+//= require turbolinks
 //= require_tree .
