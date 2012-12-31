@@ -30,10 +30,6 @@ gem 'twitter-bootstrap-markup-rails', '0.3.2.2'
 gem 'client_side_validations-simple_form'
 gem 'apotomo'
 gem "ransack"
-<<<<<<< HEAD
-gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'rolify'
-=======
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails' 
 gem 'turbolinks'
->>>>>>> e43b70edde82838cfff69c982eeca78e6c6713e4
