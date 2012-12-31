@@ -3,5 +3,5 @@ Team::Application.routes.draw do
   resources :users, :except => [:index,:new,:create]
   resources :groups
   resources :homes
-  root :to => 'homes#index'
+  root :to => 'teams#index'
 end
