@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_filter :authenticate_user!,  :except => [:index,:show]
-  respond_to  :html, :xml, :json
+  respond_to  :html, :xml, :js
   def index
     @search = Group.search(params[:search])
     @groups = @search.result(:distinct => true)
@@ -13,6 +13,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    respond_with  @group
   end
 
   def create
