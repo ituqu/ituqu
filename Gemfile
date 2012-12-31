@@ -32,3 +32,4 @@ gem 'apotomo'
 gem "ransack"
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'rolify'
+gem 'rails_autolink'

@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_filter :authenticate_user!,  :except => [:index,:show]
+  respond_to  :html, :xml, :json
   def index
     @search = Group.search(params[:search])
     @groups = @search.result(:distinct => true)

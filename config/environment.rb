@@ -1,5 +1,5 @@
 # Load the rails application
 require File.expand_path('../application', __FILE__)
-require 'rails_autolink'
 # Initialize the rails application
+require 'rails_autolink'
 Team::Application.initialize!
