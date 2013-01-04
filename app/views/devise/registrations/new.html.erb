@@ -1,17 +1,19 @@
-<h2>Sign up</h2>
+<div id="sign-form">
+	<div class="modal-header">
+		<h2>注册</h2>
+	</div>
+	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	<%= f.error_notification %>
+	<div class="modal-body">
+		<%= f.input :email, :required => true, :autofocus => true %>
+		<%= f.input :password, :required => true %>
+		<%= f.input :password_confirmation, :required => true %>
+	</div>
+	<div class="modal-footer">
+		<%= f.button :submit, "注册", :class => "btn btn-primary" %>
+		<span>｜已经有帐号了？</span>
+		<%= link_to "登录", new_session_path(resource_name) %>
+	</div>
+	<% end %>	
+</div>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :required => true %>
-    <%= f.input :password_confirmation, :required => true %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
