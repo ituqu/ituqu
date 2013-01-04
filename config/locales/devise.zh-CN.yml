@@ -1,10 +1,16 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
 "zh-CN":
-  nav:
-    logo: '途趣网'
-    teams: '团队展示'
-    sign_in: '登录'
-    sign_up: '注册'
-    sign_out: '退出'
+  errors:
+    messages:
+      expired: "您已过期，请重新申请"
+      not_found: "没有找到"
+      already_confirmed: "已经激活，请重新登录."
+      not_locked: "未锁定"
+      not_saved:
+        one: "因为 1 个错误导致此 %{resource}保存失败:"
+        other: "因为 %{count}个错误导致此 %{resource}保存失败:"
+
   devise:
     failure:
       already_authenticated: '您已经登录.'
@@ -92,3 +98,11 @@
         new:
           title: '重发解锁指令'
           submit: '重发解锁邮件'
+    navigation:
+      sign_in: '登录'
+      sign_up: '注册'
+      sign_out: '退出'
+      change_password: '修改密码'
+      change_registration: '修改登记'
+
+
