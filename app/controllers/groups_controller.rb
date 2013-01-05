@@ -21,8 +21,8 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.create(params[:group])
     if @group.save
-      #redirect_to @group, :notice => "Successfully created group."
-      respond_with @group
+      current_user.add_role :admin, @group 
+      redirect_to group_path(@group)
     else
       render :action => 'new'
     end
@@ -36,8 +36,7 @@ class GroupsController < ApplicationController
   def update
     @group = Group.find(params[:id])
     if @group.update_attributes(params[:group])
-      #respond_with @group
-      redirect_to @group, :notice  => "Successfully updated group."
+      redirect_to @group
     else
       render :action => 'edit'
     end
@@ -46,6 +45,8 @@ class GroupsController < ApplicationController
   def destroy
     @group = Group.find(params[:id])
     @group.destroy
-    redirect_to groups_url, :notice => "Successfully destroyed group."
+    redirect_to groups_url, :format => :js
   end
 end
+private
+
