@@ -1,0 +1,14 @@
+<%= search_form_for @q,:remote => true do |f| %>
+  <%= f.label :name_cont %>
+  <%= f.text_field :name_cont %>
+  <%= f.submit %>
+<%end%>
+  <% for group in @groups %>
+    <tr>
+      <td>目的地:<%= group.destination %></td>
+      <td>队伍名称<%= group.name %></td>
+      <td>队伍主页<%= link_to "团队主页",group_path(group),:remote => true %></td>
+      <td>队伍主题<%= group.description %></td>
+    </tr>
+    <br />
+  <% end %>

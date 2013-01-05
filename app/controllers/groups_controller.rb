@@ -2,8 +2,9 @@ class GroupsController < ApplicationController
   before_filter :authenticate_user!,  :except => [:index,:show]
   respond_to  :html, :xml, :js
   def index
-    @search = Group.search(params[:search])
-    @groups = @search.result(:distinct => true)
+    @q = Group.search(params[:q])
+    @groups = @q.result(:distinct => true)
+    respond_with @groups
   end
 
   def show
