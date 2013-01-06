@@ -25,9 +25,10 @@ gem "nifty-generators", :group => :development
 gem 'devise'
 gem "mocha", :group => :test
 gem 'simple_form'
-gem 'client_side_validations'
+#我用jquery-validate代替了这两个
+#gem 'client_side_validations'
+#gem 'client_side_validations-simple_form'
 gem 'twitter-bootstrap-markup-rails', '0.3.2.2'
-gem 'client_side_validations-simple_form'
 gem 'apotomo'
 gem "ransack",:git => "git://github.com/ernie/ransack.git" 
 gem 'rolify'

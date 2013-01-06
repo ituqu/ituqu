@@ -1,15 +1,14 @@
-<h2>Resend confirmation instructions</h2>
+<div id="signform">
+	<div class="modal-header">
+		<h2>Resend confirmation instructions</h2>
+	</div>
+	<%= simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+	<div class="modal-body">
+		<%= f.input :email, :required => true %>
+	</div>
+	<div class="modal-footer">
+		<%= f.button :submit, "Resend confirmation instructions" %>
+	</div>
+	<% end %>
+</div>
 
-<%= simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, :required => true %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Resend confirmation instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

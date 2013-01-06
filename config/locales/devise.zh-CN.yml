@@ -2,7 +2,8 @@
   activerecord:
     errors:
       models:
-        user:  
+        user: 
       messages:
          confirmation: "请确认密码"
          blank:        "邮箱不能为空"
+         taken: "少年，这个邮箱已经注册啦"

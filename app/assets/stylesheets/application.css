@@ -17,15 +17,15 @@
  form{
  	margin:0 !important;
  }
- #sign-form{
- 	width: 450px;
+ #sign-form, #team-form{
+ 	width: 500px;
  	margin: auto;
  	border:1px solid #E1E1E1;
  	border-radius: 10px;
  }
  #sign-form input[type=password], #sign-form input[type=email]{
  	width: 240px;
- 	height: 15px;
+ 	height: 18px;
  	margin-bottom: 10px;
  	padding: 11px 12px 9px 12px;
  	background-color: white;
@@ -36,4 +36,10 @@
  }
  .fenge{
  	margin:auto 5px;
+ }
+ #sign-form label{
+ 	display: none;
+ }
+ #sign-form .error{
+ 	display: inline;
  }

@@ -1,28 +1,16 @@
-<%= simple_form_for @group,:remote => true ,:validate => true do |f| %>
-  <p>
-  <%= f.input  :name , :label => "团队名称" %> 
-  </p>
-  <p>
-  <%= f.label  "出发地"%>
-  <%= f.select :start ,Group.Pro_select.each{|key,value| [key,value]} ,{:include_blank => true}%>
-  </p>
-  <p>
-  <%= f.label  "目的地"%>
-  <%= f.select :destination,Group.Pro_select.each{|key,value| [key,value]},{:include_blank => true},:label => "目的地"%>
-  </p>
-  <p>
-  <%= f.input :limitition ,:label => "人数上限"%>
-  </p>
-  <p>
-  <%= f.input  :description ,:label => "旅行主题" %> 
-  </p>
-  <p>
-  <%= f.input  :remark ,:label => "备注" %> 
-  </p>
-  <p>
-  <%= f.input  :link ,:label => "活动主页" %> 
-  </p>
-  <p>
-  <%= f.submit  %>
-  </p>
-<% end %>
+ <%= simple_form_for @group,:remote => true ,:validate => true do |f| %>
+ <div class="modal-body">
+   <%= f.input  :name , :label => "团队名称" %> 
+   <%= f.label  "出发地"%>
+   <%= f.select :start ,Group.Pro_select.each{|key,value| [key,value]} ,{:include_blank => true}%>
+   <%= f.label  "目的地"%>
+   <%= f.select :destination,Group.Pro_select.each{|key,value| [key,value]},{:include_blank => true},:label => "目的地"%>
+   <%= f.input :limitition ,:label => "人数上限"%>
+   <%= f.input  :description ,:label => "旅行主题", :rows => 6 %> 
+   <%= f.input  :remark ,:label => "备注", :rows => 6 %> 
+   <%= f.input  :link ,:label => "活动主页" %>   
+ </div>
+ <div class="modal-footer">
+   <%= f.submit  %>
+ </div>
+ <% end %>
