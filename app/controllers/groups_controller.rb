@@ -9,7 +9,6 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @name = @group.users
     respond_with @group
   end
 
@@ -21,7 +20,7 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.create(params[:group])
     if @group.save
-      current_user.add_role :admin, @group 
+      current_user.add_role :moderator, @group 
       redirect_to group_path(@group)
     else
       render :action => 'new'
@@ -45,7 +44,7 @@ class GroupsController < ApplicationController
   def destroy
     @group = Group.find(params[:id])
     @group.destroy
-    redirect_to groups_url, :format => :js
+    redirect_to groups_url
   end
 end
 private

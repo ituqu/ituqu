@@ -11,10 +11,10 @@
         </a>
         <div class="container-fluid nav-collapse">
           <ul class="nav">
-            <li><%= link_to t("nav.teams"), groups_path, :remote => true %></li>
+            <li><%= link_to t("nav.teams"), groups_path%></li>
             <div class="nav pull-right">
               <% if user_signed_in? %>
-              <li><%= link_to t("nav.hub"), user_path(current_user) ,:remote => true %></li>
+              <li><%= link_to t("nav.hub"), user_path(current_user) %></li>
               <li><%= link_to t("nav.sign_out"), destroy_user_session_path,:method => :delete  %></li>
               <% else %>
               <li><%= link_to t("nav.sign_in"),new_user_session_path%></li>
