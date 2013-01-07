@@ -32,6 +32,7 @@ gem 'twitter-bootstrap-markup-rails', '0.3.2.2'
 gem 'apotomo'
 gem "ransack",:git => "git://github.com/ernie/ransack.git" 
 gem 'rolify'
+gem 'cancan'
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails' 
 gem 'turbolinks'
 gem 'rails_autolink'

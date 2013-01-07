@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.create(params[:group])
     if @group.save
-      current_user.add_role :moderator, @group 
+      current_user.add_role :moderator , @group  
       redirect_to group_path(@group)
     else
       render :action => 'new'
@@ -48,4 +48,8 @@ class GroupsController < ApplicationController
   end
 end
 private
+
+  def current_user
+      current_user ||= User.new
+  end
 

@@ -19,6 +19,8 @@
   <%= @group.start %>
 </p>
 <p>
+<%if current_user && current_user.has_role?(:moderator, @group) %>
   <%= link_to "Edit", edit_group_path(@group) %> |
   <%= link_to "Destroy", @group, :confirm => 'Are you sure?', :method => :delete %> |
+<% end %>
 </p>
