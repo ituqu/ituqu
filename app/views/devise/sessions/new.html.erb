@@ -4,8 +4,8 @@
 	</div>
 	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	<div class="modal-body">
-		<%= f.input :email, :required => true, :autofocus => true, :placeholder => "邮箱", :class => "required", :id => "cemail" %>
-		<%= f.input :password, :required => true, :placeholder => "密码" %>
+		<%= f.input :email, :input_html => {:class => "required email", :autofocus => true, :placeholder => "邮箱" } %>
+		<%= f.input :password, :input_html => {:minlength => "6", :placeholder => "密码"} %>
 		<%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
 	</div>
 	<div class="modal-footer">

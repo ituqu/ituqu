@@ -1,16 +1,14 @@
  <%= simple_form_for @group,:validate => true do |f| %>
  <div class="modal-body">
-   <%= f.input  :name , :label => "团队名称" %> 
-   <%= f.label  "出发地"%>
-   <%= f.select :start ,Group.Pro_select.each{|key,value| [key,value]} ,{:include_blank => true}%>
-   <%= f.label  "目的地"%>
-   <%= f.select :destination,Group.Pro_select.each{|key,value| [key,value]},{:include_blank => true},:label => "目的地"%>
-   <%= f.input :limitition ,:label => "人数上限"%>
-   <%= f.input  :description ,:label => "旅行主题", :rows => 6 %> 
-   <%= f.input  :remark ,:label => "备注", :rows => 6 %> 
-   <%= f.input  :link ,:label => "活动主页" %>   
+   <%= f.input  :name , :placeholder => "团队名称" %> 
+   <%= f.select :start , Group.Pro_select.each{|key,value| [key,value]} %>
+   <%= f.select :destination,Group.Pro_select.each{|key,value| [key,value]} %>
+   <%= f.input :limitition , :placeholder => "人数上限"%>
+   <%= f.input  :description , :placeholder => "旅行主题", :input_html => { :rows => 2 } %> 
+   <%= f.input  :remark ,:placeholder => "备注", :input_html => { :rows => 2 } %> 
+   <%= f.input  :link ,:placeholder => "活动主页" %>   
  </div>
  <div class="modal-footer">
-   <%= f.submit  %>
+   <%= f.submit "创建团队", :class => "btn btn-primary" %>
  </div>
  <% end %>

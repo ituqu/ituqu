@@ -9,13 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require dataTables/jquery.dataTables
+ * require dataTables/jquery.dataTables
  *= require_tree .
  */
  body{
  }
+
+ /*注册，登录，创建团队*/
  form{
  	margin:0 !important;
+ }
+ select{
+ 	display: block !important;
  }
  #sign-form, #team-form{
  	width: 500px;
@@ -37,9 +42,22 @@
  .fenge{
  	margin:auto 5px;
  }
- #sign-form label{
+ #sign-form label, #team-form label{
  	display: none;
  }
- #sign-form .error{
- 	display: inline;
+ .error{
+ 	color: red;
+ 	display: inline !important;
+ }
+
+ /*团队index页面*/
+ #groups{
+ 	border:1px solid #DDD;
+ }
+ #groups_length{
+ 	float: left;
+ }
+
+ #groups_filter{
+ 	float:right;
  }

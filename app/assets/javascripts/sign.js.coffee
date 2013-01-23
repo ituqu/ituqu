@@ -1,2 +1,0 @@
-jQuery ->
-	$("form").validate();

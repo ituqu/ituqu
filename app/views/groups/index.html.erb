@@ -1,21 +1,21 @@
-<table id="groups">
+<table id="groups" class="table table-border table-striped table-hover">
   <thead>
-  <tr>
-    <th>目的地</th>
-    <th>队伍名称</th>
-    <th>团队主页</th>
-    <th>队伍主题</th>
-  </tr>
-  <thead>
-  <tbody>
-  <% for group in @groups %>
     <tr>
-      <td><%= group.destination %></td>
-      <td><%= group.name %></td>
-      <td><%= link_to "团队主页",group_path(group)%></td>
-      <td><%= group.description %></td>
+      <th>目的地</th>
+      <th>队伍名称</th>
+      <th>团队主页</th>
+      <th>队伍主题</th>
     </tr>
-  <% end %>
-  </tbody>
-</table>
+    <thead>
+      <tbody>
+        <% for group in @groups %>
+        <tr>
+          <td><%= group.destination %></td>
+          <td><%= group.name %></td>
+          <td><%= link_to "团队主页",group_path(group)%></td>
+          <td><%= group.description %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
 

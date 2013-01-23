@@ -246,6 +246,7 @@ $.extend($.validator, {
 				this.element(element);
 			}
 			// or option elements, check parent select in that case
+			else if (element.parentNode.name in this.submitted) {
 				this.element(element.parentNode);
 			}
 		},
@@ -282,12 +283,12 @@ $.extend($.validator, {
 		creditcard: "Please enter a valid credit card number.",
 		equalTo: "少年，请输入相同的密码",
 		maxlength: $.validator.format("Please enter no more than {0} characters."),
-		minlength: $.validator.format("Please enter at least {0} characters."),
+		minlength: $.validator.format("密码至少{0}位."),
 		rangelength: $.validator.format("Please enter a value between {0} and {1} characters long."),
 		range: $.validator.format("Please enter a value between {0} and {1}."),
 		max: $.validator.format("Please enter a value less than or equal to {0}."),
 		min: $.validator.format("Please enter a value greater than or equal to {0}.")
-	},
+	}, 
 
 	autoCreateRanges: false,
 
