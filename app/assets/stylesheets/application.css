@@ -8,48 +8,38 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ 
+ *= require dataTables/jquery.dataTables
+ *= require bootstrap_and_overrides
  *= require_self
- * require dataTables/jquery.dataTables
- *= require_tree .
+ *= require commen
+ *= require sign 
+ *= require user
  */
  body{
+ 	background: #777 url('bg.jpg') no-repeat;
+ }
+ label{
+ 	display: inline;
+ }
+ .navbar{
+ 	margin: 50px auto 0 50px;
+ }
+ #logo{
+ 	font-size: 2.0em;
+ 	margin-right: 150px;
+ 	letter-spacing: 2px;
+ }
+ .navbar a{
+ 	margin-right: 30px;
+ 	font-size: 1.2em;
+ 	color: white !important;
+ }
+ header hr{
+ 	margin-top: 10px auto;
  }
 
- /*注册，登录，创建团队*/
- form{
- 	margin:0 !important;
- }
- select{
- 	display: block !important;
- }
- #sign-form, #team-form{
- 	width: 500px;
- 	margin: auto;
- 	border:1px solid #E1E1E1;
- 	border-radius: 10px;
- }
- #sign-form input[type=password], #sign-form input[type=email]{
- 	width: 240px;
- 	height: 18px;
- 	margin-bottom: 10px;
- 	padding: 11px 12px 9px 12px;
- 	background-color: white;
- 	border: 1px solid #E1E1E1;
- 	border-radius: 2px;
- 	font-size: 20px;
- 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
- }
- .fenge{
- 	margin:auto 5px;
- }
- #sign-form label, #team-form label{
- 	display: none;
- }
- .error{
- 	color: red;
- 	display: inline !important;
- }
-
+ 
  /*团队index页面*/
  #groups{
  	border:1px solid #DDD;
@@ -61,3 +51,5 @@
  #groups_filter{
  	float:right;
  }
+
+ 

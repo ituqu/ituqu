@@ -1,17 +1,14 @@
 <div id="sign-form">
-	<div class="modal-header">
-		<h2>注册</h2>
-	</div>
+	<h2>注册</h2>
 	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-	<div class="modal-body">
-		<%= f.input :email, :input_html => {:class => "required email", :id => "sign_email", :autofocus => true, 
-			:placeholder => "邮箱"  } %>
-		<%= f.input :password, :input_html => {:minlength => 6, :placeholder => "密码"} %>
-		<%= f.input :password_confirmation, :input_html => {:equalTo => "#user_password", 
-		:placeholder => "密码确认" }%>
-	</div>
-	<div class="modal-footer">
-		<%= f.button :submit, "注册", :class => "btn btn-primary" %>
+		<%= f.input :email, :input_html => { class: "required email", id: "sign_email", 
+								autofocus: true, placeholder: "邮箱" } %>
+		<%= f.input :password, :input_html => {minlength: 6, 
+								placeholder: "密码", id: "text"} %>
+		<%= f.input :password_confirmation, :input_html => {:equalTo => "#text",
+	 							placeholder: "密码确认", id: "text"} %>
+	<div class="submit">
+		<%= f.button :submit, "注册", :class => "btn btn-primary btn-large" %>
 		<span>｜已经有帐号了？</span>
 		<%= link_to "登录", new_session_path(resource_name) %>
 	</div>

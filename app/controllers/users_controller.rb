@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
-  respond_to  :js,:html,:xml
+  respond_to  :html,:json
+  
   def show
     @user = User.find(params[:id])
     respond_with @user
@@ -12,11 +13,9 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(params[:user])
-      redirect_to @user, :notice  => "Successfully updated user."
-    else
-      render :action => 'edit'
-    end
+    @user.update_attributes(params[:user])
+    respond_with @user 
+    #redirect_to @user, :notice  => "Successfully updated user."
   end
 
   def destroy

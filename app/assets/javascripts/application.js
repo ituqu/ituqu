@@ -12,7 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.purr 
 //= require twitter/bootstrap
 //= require dataTables/jquery.dataTables
+//= require best_in_place
 //require turbolinks
 //= require_tree .
+
+$('.carousel').carousel()

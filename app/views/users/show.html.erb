@@ -1,8 +1,23 @@
-<p>
-  <%= @user.name %>
-</p>
+<%= form_for @user, :html => {:multipart => true} do |f| %>
+<div class="row-fluid">
+  <div class="span4" id="user_info">
+    <div id="user_avatar">
+      <%= image_tag(@user.avatar_url(:thumb).to_s) if @user.avatar? %>
+      <%= f.file_field :avatar %>
+      <%= f.submit '确认', class: "btn-primary"%>
+    </div>
+    <p><label>email: </label> <%= link_to @user.email, user_path(@user) %></p>
+    <p>
+      <label>qq: </label> 
+      <%= best_in_place @user, :qq %>
+    </p>
+    <p><label>性别: </label><%= best_in_place @user, :gender %></p>
+  </div>
+  <div class="span8">
+    <%= link_to "Create new Team",new_group_path %>
+  </div>
+</div>
+<% end %>
 
-<p>
-  <%= link_to "Edit", edit_user_path(@user) %> |
-  <%= link_to "Create new Team",new_group_path %>
-</p>
+
+

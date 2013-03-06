@@ -1,0 +1,30 @@
+/*注册，登录，创建团队*/
+ form{
+ 	margin:0 !important;
+ }
+ select{
+ 	display: block !important;
+ }
+ #sign-form h2{
+ 	margin-bottom: 30px;
+ 	color: white;
+ }
+ #sign-form, #team-form{
+ 	width: 500px;
+ 	margin: auto;
+ 	margin-top: 150px;
+ 	border:1px solid #E1E1E1;
+ 	border-radius: 10px;
+ 	padding:20px;
+ 	padding-left:40px; 
+ }
+
+ .fenge{
+ 	margin:auto 5px;
+ }
+ #sign-form label, #team-form label{
+ 	display: none;
+ }
+ .error{
+ 	color: red;
+ }

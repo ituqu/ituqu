@@ -25,9 +25,6 @@ gem "nifty-generators", :group => :development
 gem 'devise'
 gem "mocha", :group => :test
 gem 'simple_form'
-#我用jquery-validate代替了这两个
-#gem 'client_side_validations'
-#gem 'client_side_validations-simple_form'
 gem 'twitter-bootstrap-markup-rails', '0.3.2.2'
 gem 'apotomo'
 gem "ransack",:git => "git://github.com/ernie/ransack.git" 
@@ -36,3 +33,6 @@ gem 'cancan'
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails' 
 gem 'turbolinks'
 gem 'rails_autolink'
+gem 'carrierwave'
+gem "rmagick", "~> 2.13.1"
+gem 'best_in_place'
