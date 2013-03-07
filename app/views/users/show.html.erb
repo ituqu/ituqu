@@ -6,15 +6,19 @@
       <%= f.file_field :avatar %>
       <%= f.submit '确认', class: "btn-primary"%>
     </div>
-    <p><label>email: </label> <%= link_to @user.email, user_path(@user) %></p>
+    <p>email: <%= @user.email %></p>
     <p>
       <label>qq: </label> 
       <%= best_in_place @user, :qq %>
     </p>
     <p><label>性别: </label><%= best_in_place @user, :gender %></p>
+    <p><%= render 'join_team_info' %></p>
+    <p>
+    </p>
   </div>
+
   <div class="span8">
-    <%= link_to "Create new Team",new_group_path %>
+    <%= link_to "创建新团队", new_group_path %>
   </div>
 </div>
 <% end %>

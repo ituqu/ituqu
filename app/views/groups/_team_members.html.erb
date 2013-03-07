@@ -1,0 +1,8 @@
+<ul id="team_member">
+  <li>团队成员：</li>
+  <% for user in @group.users %>
+    <li><%= link_to user.email, user_path(user) %></li>
+  <% end %> 
+</ul>
+<li><%= link_to "加入团队", groupships_path(:group_id => @group),
+               :method => :post  %></li>

@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   attr_accessible :name,:email, :password, :password_confirmation, :remember_me,
   								:avatar, :avatar_cache, :qq, :gender
-  has_and_belongs_to_many  :groups
+  
+  has_many :groupships
+  has_many :groups, through: :groupships
+  
   mount_uploader :avatar, AvatarUploader
 end

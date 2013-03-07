@@ -47,9 +47,5 @@ class GroupsController < ApplicationController
     redirect_to groups_url
   end
 end
-private
 
-  def current_user
-      current_user ||= User.new
-  end
 

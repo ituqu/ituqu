@@ -1,0 +1,14 @@
+ <ul>
+ 	<% if @user.groupships.length == 0 %>
+ 	<li>你还没有加入任何团队～～～</li>
+ 	<% else %>
+ 	<li>加入的团队</li>
+ 		<% for groupship in @user.groupships %>
+ 		<li>
+ 			<%= link_to groupship.group.name, groupship.group %>
+ 			<%= link_to "退出团队", groupship_path(groupship), 
+ 									confirm: "Are you sure", :method => :delete %>
+ 		</li>     
+ 		<% end %>
+ 	<% end %>
+ </ul>

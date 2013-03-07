@@ -17,7 +17,9 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="span10 offset1">
+        <%= flash[:notice] || nil %>
         <%= yield  %>
+        <%= debug params %>
       </div>
     </div><!--/row-->
   </div> <!-- /container -->
